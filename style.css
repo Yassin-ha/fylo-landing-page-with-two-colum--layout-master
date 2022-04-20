@@ -1,0 +1,429 @@
+/* global rules  */
+:root {
+    --main-color: hsl(243, 87%, 12%);
+    --second-color: hsl(238, 22%, 44%);
+    --main-padding: 100px;
+}
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+ul {
+    list-style: none;
+}
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: 0 auto;
+}
+/* medium */
+@media screen and (min-width: 768px) {  
+    .container {
+        width: 720px;
+    }   
+}
+ 
+/* large */
+@media screen and (min-width: 992px) { 
+    .container {
+        width: 960px;
+    }
+ 
+}
+ 
+/* Extra large */
+@media screen and (min-width: 1200px) {  
+    .container {
+        width: 1140px;
+    }
+    
+}
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+/* Start header */
+header .container {
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+}
+header .container .logo {
+    display: flex;
+    align-items: center;
+}
+header .container ul {
+    font-family: 'Raleway', sans-serif;
+    display: flex;
+}
+header .container ul li:not(last-child) {
+    margin-right: 30px;
+}
+header .container ul li a {
+    text-decoration: none;
+    color: var(--main-color);
+}
+@media screen and (max-width: 425px) {
+    header .container {
+        padding-top: 0;
+    }
+    header .logo img {
+        width: 80px;
+    }
+    header .container ul li:not(last-child) {
+        margin-right: 15px;
+    }
+    header .container ul li a {
+        font-size: 12px;
+    }
+
+}
+/* End header */
+/* Start illustration 1 */
+.illustration-1 {
+    padding-top: var(--main-padding);
+    padding-bottom: var(--main-padding);
+}
+.illustration-1 .container {
+    display: flex;
+    gap: 40px;
+}
+.illustration-1 .container .info h1 {
+    font-family: 'Raleway', sans-serif;
+    font-size: 2.2rem;
+}
+.illustration-1 .container .info p {
+    margin: 20px 0;
+}
+.illustration-1 .container .info form input[type="email"] {
+    width: 55%;
+    padding: 15px 20px;
+    margin-right: 10px;
+    outline: none;
+}
+.illustration-1 .container .info form input[type="submit"] {
+    padding: 15px 0;
+    width: 30%;
+    background-color: hsl(224, 93%, 58%);
+    color: #fff;
+    border: none;
+    transition: 0.3s;
+}
+.illustration-1 .container .info form input[type="submit"]:hover {
+    cursor: pointer;
+    opacity: 0.7;
+}
+.illustration-1 .container .image img {
+    max-width: 100%;
+}
+@media screen and (max-width: 992px) {
+    .illustration-1 .container {
+        flex-direction: column-reverse;
+        align-items: center;
+        row-gap: 50px;
+    } 
+    .illustration-1 .container .image img {
+        width: 500px;
+    }
+}
+@media screen and (max-width: 425px) {
+    .illustration-1 .container .info {
+        text-align: center;
+    }
+    .illustration-1 .container .info h1 {
+        font-size: 1.7rem;
+
+    }
+    .illustration-1 .container .info form input[type="email"] {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+    .illustration-1 .container .info form input[type="submit"] {
+        width: 100%;
+    }
+}
+/* End illustration 1 */
+/* Start illustration 2 */
+.illustration-2 {
+    padding-top: 110px;
+    background-image: url(/images/bg-curve-desktop.svg);
+    background-repeat: no-repeat;
+    
+}
+.illustration-2 .bg {
+    background-color: hsl(240deg 75% 98% / 70%);
+    padding-bottom: 100px;
+    
+}
+.illustration-2 .container {
+    display: flex;
+    padding-top: var(--main-padding);
+    gap: 10px;
+}
+
+.illustration-2 .container .text h1 {
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+    font-family: 'Raleway', sans-serif;
+}
+.illustration-2 .container .text > p {
+    margin-bottom: 10px;
+    width: 500px;
+    max-width: 100%;
+    line-height: 1.5;
+}
+.illustration-2 .container .text a {
+    color: hsl(170, 45%, 43%);
+    text-decoration: none;
+    position: relative;
+    transition: 0.3s;
+}
+.illustration-2 .container .text a:hover {
+    opacity: 0.7;
+}
+.illustration-2 .container .text a::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: hsl(170, 45%, 43%);
+    
+}
+.illustration-2 .container .text a i {
+    border-radius: 50%;
+    font-size: 8px;
+    padding: 3px;
+    background-color: hsl(170, 45%, 43%);
+    color: #fff;
+    margin-left: 3px;
+}
+.illustration-2 .container .text .quote {
+    background-color: #fff;
+    margin-top: 40px;
+    padding: 20px 30px;
+    width: 400px;
+    box-shadow: 1px 1px 9px 3px #00000014;
+}
+.illustration-2 .container .text .quote p {
+    margin-top: 10px;
+    line-height: 1.5;
+}
+.illustration-2 .container .text .quote .testim {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+.illustration-2 .container .text .quote .testim img {
+    height: 40px;
+    border-radius: 50%;
+    margin-top: 4px;
+}
+.illustration-2 .container .text .quote .testim .name span {
+    font-size: 14px;
+}
+.illustration-2 .container .image {
+    flex-basis: 48%;
+}
+.illustration-2 .container .image img {
+    max-width: 100%;
+}
+@media screen and (max-width: 992px) {
+    .illustration-2 .container {
+        flex-direction: column-reverse;
+        align-items: center;
+        row-gap: 50px;
+    } 
+    .illustration-2 .container .image img {
+        width: 500px;
+    }
+    .illustration-2 .container .text {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .illustration-2 {
+        padding-top: 52px;
+        background-image: url(/images/bg-curve-mobile.svg);
+    }
+    .illustration-2 .container .text {
+        text-align: center;
+    }
+    .illustration-2 .container .text h1 {
+        text-align: center;
+        font-size: 1.2rem;
+    }
+    .illustration-2 .container .text > p {
+        font-size: 14px;
+        text-align: left;
+    }
+    .illustration-2 .container .text a {
+        font-size: 14px;
+    }
+    .illustration-2 .container .text .quote {
+        width: 80%;
+        padding: 15px;
+        margin: 0 auto;
+        margin-top: 40px;
+        text-align: left;
+    }
+    
+    .illustration-2 .container .text .quote p {
+        font-size: 11px;
+        
+    }
+    .illustration-2 .container .text .quote .testim img {
+        height: 30px;
+    }
+    .illustration-2 .container .text .quote .testim .name h3 {
+        font-size: 10px;
+    }
+    .illustration-2 .container .text .quote .testim .name span {
+        font-size: 8px;
+    }
+    
+}
+/* End illustration 2 */
+/* Start sign up */
+.sign-up {
+    background-color: var(--second-color);
+    padding-top: var(--main-padding);
+    padding-bottom: var(--main-padding);
+}
+.sign-up .container {
+    display: flex;
+    justify-content: space-between;
+}
+.sign-up .container .text {
+    width: 500px;
+    transform: translateY(-10px);
+    max-width: 100%;
+}
+.sign-up .container .text h1 {
+    color: #fff;
+    margin-bottom: 20px;
+}
+.sign-up .container .text p {
+    color: #efeded;
+}
+.sign-up .container .subscribe {
+    width: 450px;
+    max-width: 100%;
+}
+.sign-up .container .subscribe form input[type="email"] {
+    width: 100%;
+    padding: 15px 20px;
+    margin-bottom: 15px;
+    border: none;
+}
+.sign-up .container .subscribe form input[type="submit"] {
+    padding: 15px 30px;
+    background-color: hsl(224, 93%, 58%);
+    color: #fff;
+    border: none;
+    transition: 0.3s;
+}
+.sign-up .container .subscribe form input[type="submit"]:hover {
+    background-color: hsl(224deg 97% 70%);
+    cursor: pointer;
+
+}
+@media screen and (max-width: 992px) {
+    .sign-up .container {
+        flex-direction: column;
+        gap: 40px;
+    }
+}
+@media screen and (max-width: 425px) {
+    .sign-up .container .text {
+        text-align: center;
+    }
+    .sign-up .container .text h1 {
+        font-size: 1.5rem;
+    }
+    .sign-up .container .subscribe {
+        text-align: center;
+    }
+    .sign-up .container .subscribe form input[type="email"] {
+        width: 80%;
+    }
+    .sign-up .container .subscribe form input[type="submit"] {
+        width: 80%;
+    }
+    
+}
+/* End sign up */
+/* Start footer */
+footer {
+    background-color: var(--main-color);
+    padding-top: var(--main-padding);
+    padding-bottom: var(--main-padding);
+}
+footer .container .info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    margin-top: 30px;
+    row-gap: 40px;
+}
+footer .container .info .p-e {
+    color: #fff;
+}
+footer .container .info .p-e p {
+    margin-bottom: 10px;
+}
+footer .container .info .p-e p img {
+    margin-right: 10px;
+}
+footer .container .info .about-us li,
+footer .container .info .contact-us li,
+footer .container .info .social-media li {
+    margin-bottom: 10px;
+}
+
+footer .container .info .about-us a ,
+footer .container .info .contact-us a,
+footer .container .info .social-media a {
+    color: #fff;
+    text-decoration: none;
+    margin-bottom: 10px;
+    transition: 0.3s;
+}
+footer .container .info .about-us a:hover ,
+footer .container .info .contact-us a:hover,
+footer .container .info .social-media a:hover {
+    color: hsl(224, 93%, 58%);
+}
+footer .container .info .social-media ul {
+    display: flex;
+    gap: 20px;
+}
+footer .container .info .social-media a {
+    border-radius: 50%;
+    border: 1px solid;
+    padding: 6px 10px;
+}
+@media (min-width = 1200px) {
+    footer .container .info .about-us ,
+    footer .container .info .contact-us ,
+    footer .container .info .social-media {
+        display: flex;
+        justify-content: center;
+    }
+}
+@media screen and (max-width: 425px) {
+    footer .container {
+        padding-left: 30px;
+    }
+    footer .container .social-media ul {
+        justify-content: center;
+    }
+}
+ 
+/* End footer */
+
